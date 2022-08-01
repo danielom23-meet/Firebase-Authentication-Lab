@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+    <form action = "/add_tweet" method = "POST">
+        <div>
+            <label>Title</label>
+            <div class="input-group">
+                <input type="text"  name="title">
+            </div>
+        </div>
+        <div>
+            <label>Text</label>
+            <div class="input-group">
+                <input type="text"  name="text" maxlength = "280">
+            </div>
+        </div>
+        <div>
+            <button> <a href = "/signout"> Sign Out </a></button>
+        </div>
+        <div>
+            <input type="submit"/>
+        </div>
+    </form>
     Great Job!
 </body>
 </html>
