@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask import session as login_session
 import pyrebase
+from datetime import date
+
+
 
 config = {
   "apiKey": "AIzaSyA4asYj9YmVNUU2w5mEPlC_eC3sUdEs4F0",
@@ -20,6 +23,9 @@ db = firebase.database()
 app = Flask(__name__, template_folder='templates', static_folder='static')
 app.config['SECRET_KEY'] = 'super-secret-key'
 
+
+today = date.today()
+print("Today's date:", today)
 
 @app.route('/', methods=['GET', 'POST'])
 def signin():
