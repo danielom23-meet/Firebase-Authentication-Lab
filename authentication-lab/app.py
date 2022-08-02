@@ -63,6 +63,8 @@ def add_tweet():
         tweet = {"title": request.form['title'], "text": request.form['text'], "uid": login_session["user"]["localId"]}
         try:
             db.child("Users").child(login_session['user']['localId']).child("Tweets").push(tweet)
+
+            
             return redirect(url_for('all_tweets'))
         except:
             error = "There was a problem"
